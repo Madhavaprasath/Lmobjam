@@ -16,6 +16,7 @@ func _physics_process(delta):
 	if transition!=null:
 		previous_state=current_state
 		current_state=transition
+		print(current_state)
 		enter_state(previous_state,current_state)
 		exit_state(previous_state,current_state)
 
