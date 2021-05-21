@@ -14,6 +14,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Actor/Actor.gd"
 }, {
+"base": "Area2D",
+"class": "Bullet",
+"language": "GDScript",
+"path": "res://Bullet/Bullet.gd"
+}, {
+"base": "Actor",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://Actor/enemies/Enemy.gd"
+}, {
 "base": "Node",
 "class": "StateMachine",
 "language": "GDScript",
@@ -21,6 +31,8 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Actor": "",
+"Bullet": "",
+"Enemy": "",
 "StateMachine": ""
 }
 
@@ -28,6 +40,27 @@ _global_script_class_icons={
 
 config/name="LMOB Jam"
 config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://Globals/Global.gd"
+
+[input]
+
+Click={
+"deadzone": 0.51,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+
+[layer_names]
+
+2d_physics/layer_1="Envirorment"
+2d_physics/layer_2="Wall_slide"
+2d_physics/layer_3="Player"
+2d_physics/layer_4="Enemies"
+2d_physics/layer_5="HitBox"
+2d_physics/layer_6="HurtBox"
 
 [physics]
 

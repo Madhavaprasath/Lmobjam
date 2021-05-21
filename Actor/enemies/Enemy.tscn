@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Actor/enemies/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://Actor/Actor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Actor/enemies/Enemy_StateMachine.gd" type="Script" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 76.5984
+
+[node name="Enemy" instance=ExtResource( 2 )]
+collision_layer = 8
+script = ExtResource( 1 )
+speed = 200
+
+[node name="Wall_raycast" type="Node2D" parent="Body" index="2"]
+
+[node name="RayCast2D" type="RayCast2D" parent="Body/Wall_raycast" index="0"]
+position = Vector2( 32, -7 )
+enabled = true
+cast_to = Vector2( 25, 0 )
+
+[node name="RayCast2D2" type="RayCast2D" parent="Body/Wall_raycast" index="1"]
+position = Vector2( 32, -22 )
+enabled = true
+cast_to = Vector2( 25, 0 )
+
+[node name="Down_raycast" type="RayCast2D" parent="Body" index="3"]
+position = Vector2( 33.9411, 1.06066 )
+enabled = true
+
+[node name="Statemachine" parent="." index="1"]
+script = ExtResource( 4 )
+
+[node name="Areas" type="Node2D" parent="." index="3"]
+
+[node name="Detect_area" type="Area2D" parent="Areas" index="0"]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/Detect_area" index="0"]
+visible = false
+shape = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="." index="4"]
+autostart = true
+
+[connection signal="body_entered" from="Areas/Detect_area" to="." method="_on_Detect_area_body_entered"]
+[connection signal="body_exited" from="Areas/Detect_area" to="." method="_on_Detect_area_body_exited"]
+[connection signal="timeout" from="Timer" to="Statemachine" method="_on_Timer_timeout"]
