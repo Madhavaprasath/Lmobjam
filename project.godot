@@ -90,9 +90,8 @@ Click={
 2d_physics/layer_1="Envirorment"
 2d_physics/layer_2="Wall_slide"
 2d_physics/layer_3="Player"
-2d_physics/layer_4="Enemies"
-2d_physics/layer_5="HitBox"
-2d_physics/layer_6="HurtBox"
+2d_physics/layer_4="Arcade_Enemies"
+2d_physics/layer_5="Flying_enemies"
 
 [physics]
 
