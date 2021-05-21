@@ -42,7 +42,7 @@ func _on_Reload_timer_timeout():
 	can_shoot=true
 
 func shoot():
-	Global.on_shooting(bullet,$bullet_spawner.global_position,direction)
+	Global.on_shooting(bullet,$Body/bullet_spawner.global_position,direction)
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):

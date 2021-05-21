@@ -32,7 +32,7 @@ collision_mask = 27
 [node name="Bullet" parent="." index="0"]
 frames = SubResource( 1 )
 animation = "Fire"
-frame = 1
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" parent="." index="1"]

@@ -115,8 +115,10 @@ func _unhandled_input(event):
 			Global.on_shooting(parent.bullet,parent.spawn_point.global_position,parent.facing)
 			parent.shooting=true
 			parent.reload_timer.start()
+
+
 func enter_state(old_state,new_state):
 	parent.animation_player.play(new_state)
-
+	parent.play_sound(new_state)
 func exit_state(old_state,new_state):
 	pass

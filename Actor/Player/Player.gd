@@ -17,6 +17,8 @@ var facing=1
 
 onready var reload_timer=get_node("Timer")
 onready var spawn_point=get_node("Body/Position2D")
+onready var sound_manager=get_node("Sound_manager")
+
 
 func apply_movement(delta):
 	var directions={"Left":Input.is_action_pressed("ui_left"),
@@ -58,6 +60,14 @@ func knock_back(delta):
 	velocity=Vector2()
 	knocking=false
 
-
+func play_sound(state):
+	for i in sound_manager.get_children():
+		if i.name==state && state in ["Run","Wall_slide"]:
+			if !i.playing:
+				i.play()
+		elif i.name==state:
+			i.play()
+		elif i.name!=state:
+			i.stop()
 func _on_Timer_timeout():
 	shooting=false

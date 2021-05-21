@@ -174,6 +174,9 @@ anims/Wander = SubResource( 16 )
 [node name="Down_raycast" parent="Body" index="4"]
 enabled = false
 
+[node name="bullet_spawner" type="Position2D" parent="Body" index="5"]
+position = Vector2( 14.316, 19.8138 )
+
 [node name="CollisionShape2D" parent="Areas/Detect_area" index="0"]
 visible = true
 shape = SubResource( 15 )
@@ -183,10 +186,7 @@ shape = SubResource( 15 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/Shoot_area" index="0"]
 shape = SubResource( 17 )
 
-[node name="bullet_spawner" type="Position2D" parent="." index="5"]
-position = Vector2( 14.316, 19.8138 )
-
-[node name="Reload_timer" type="Timer" parent="." index="6"]
+[node name="Reload_timer" type="Timer" parent="." index="5"]
 
 [connection signal="animation_finished" from="Body/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="body_entered" from="Areas/Shoot_area" to="." method="_on_Shoot_area_body_entered"]
