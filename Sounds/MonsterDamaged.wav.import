@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/MonsterDamaged.wav-d2f3189d9efcd645bf72b6e12b08c2fe.sample"
+
+[deps]
+
+source_file="res://Sounds/MonsterDamaged.wav"
+dest_files=[ "res://.import/MonsterDamaged.wav-d2f3189d9efcd645bf72b6e12b08c2fe.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

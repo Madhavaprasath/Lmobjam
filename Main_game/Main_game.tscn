@@ -1,6 +1,5 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Actor/enemies/Flying_enemy/Flying_enemy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Actor/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
 [ext_resource path="res://Main_game/Main_game.gd" type="Script" id=4]
@@ -57,13 +56,4 @@ bullet = ExtResource( 6 )
 [node name="Bullets" type="Node2D" parent="."]
 
 [node name="Arcade_machine" parent="." instance=ExtResource( 5 )]
-position = Vector2( 885.354, 536.121 )
-
-[node name="Arcade_machine2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 299.87, 540.363 )
-
-[node name="Flying_enemy" parent="." instance=ExtResource( 1 )]
-position = Vector2( 733.626, 252.863 )
-
-[node name="Flying_enemy2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 464.925, 329.23 )
+position = Vector2( 648.391, 402.596 )

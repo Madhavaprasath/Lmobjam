@@ -27,11 +27,12 @@ animations = [ {
 extents = Vector2( 10.9839, 4.92377 )
 
 [node name="Player_bullet" instance=ExtResource( 1 )]
-collision_mask = 11
+collision_mask = 27
 
 [node name="Bullet" parent="." index="0"]
 frames = SubResource( 1 )
 animation = "Fire"
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" parent="." index="1"]

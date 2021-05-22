@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/MonsterFlying_Death.wav-708ccc0215a609258c1369e926afcc98.sample"
+
+[deps]
+
+source_file="res://Sounds/MonsterFlying_Death.wav"
+dest_files=[ "res://.import/MonsterFlying_Death.wav-708ccc0215a609258c1369e926afcc98.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
